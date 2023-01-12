@@ -1,0 +1,82 @@
+<?php 
+    session_start();
+    require_once 'config.php'; // ajout connexion bdd 
+   // si la session existe pas soit si l'on est pas connecté on redirige
+    if(!isset($_SESSION['user'])){
+        header('Location:index.php');
+        
+    }
+
+    
+?>
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Espace membre</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Bonjour!</title>
+</head>
+  <body>
+    <h1>Bienvenue <?php echo $_SESSION['user']; ?></h1>
+
+    <nav>
+			<div class="table">
+				<ul>
+					<li class="menu-ind">
+						<a href="accueil.html">Accueil</a>
+					</li>
+					<li class="menu-exp">
+						<a href="communaute.html">Ma Communauté</a>
+					</li>
+					<li class="menu-hob">
+						<a href="post.html">Post +</a>
+					</li>
+
+          <li class="orientation">
+						<a href="orientation.html">Orientation Professionelle</a>
+					</li>
+
+					<li class="menu-con">
+						<a href="contact.html">Contactez-Nous !</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+
+    <h2>Presentation du site</h2>
+    <p>.......................................................</p>
+    <p>.......................................................</p>
+    <p>.......................................................</p>
+    <p>.......................................................</p>
+    <p>.......................................................</p>
+    <p>.......................................................</p>
+    <p>.......................................................</p>
+    <p>.......................................................</p>
+    <p>.......................................................</p>
+    <p>.......................................................</p>
+    <p>.......................................................</p>
+    <p>.......................................................</p>
+    <p>.......................................................</p>
+
+
+
+    
+    <div class="decon">
+    <a href="deconnexion.php" class="btn btn-danger btn-lg">Déconnexion</a>
+
+    </div>
+
+    <footer>
+			<p>Copyright 2022 Dolne Blandine Furcine - Toute reproduction interdite</p>
+		</footer>
+
+    
+  </body>
+</html>
